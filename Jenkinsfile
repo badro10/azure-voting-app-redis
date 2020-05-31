@@ -20,5 +20,11 @@ pipeline {
              }
          }
       }
+      stage ('Test Using Trivy') {
+        steps {
+          sh 'pwd'
+          sh 'trivy bfennane/test-app:1.0.0'
+        }
+      }
    }
 }
